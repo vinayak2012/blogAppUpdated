@@ -1,0 +1,25 @@
+
+<br>
+    <div class="container" style="width: 80%;">
+      <div class="card mt-4 bg-light">
+      <div class="card-body">
+        <div class="card-title text-info">
+            <h1>{{this.postService.selectedPost.title}}</h1>
+        </div>
+        <br>
+        <div class="card-subtitle mb-2">
+            Category - {{this.postService.selectedPost.categories}}
+         </div>
+         <br>
+         <div class="text-small text-muted mb-2">
+            {{this.postService.selectedPost.description}}
+         </div>
+         <br>
+         <br>
+         <a  class="btn btn-outline-primary" style="margin-left: 35%" [routerLink]="['/editarticle', this.postService.selectedPost._id]">Edit</a>
+         <a  class="btn btn-outline-danger" style="margin-left: 20px" (click)="onDelete(this.postService.selectedPost._id)">Delete</a>
+         <button class="btn btn-outline-secondary" style="margin-left: 20px" routerLink='/home'>Cancel</button>
+    <br>
+  </div>
+</div>
+    </div>

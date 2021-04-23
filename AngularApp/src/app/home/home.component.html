@@ -1,0 +1,21 @@
+<div class="container">
+    <br>
+    <div class="heading">
+        <h1 class="mb-4 text-center text-secondary">Your Recent Posts</h1>
+    </div>
+    <div *ngFor="let post of postService.posts">
+        <div class="card mt-4 mb-4 bg-light">
+            <div class="card-body">
+                <div class="card-title text-info">
+                    <h3>{{post.title}}</h3>
+                </div>
+                <div class="card-subtitle mb-2">
+                    Category - {{post.categories}}
+                 </div>
+                 <br>
+                 <a  class="btn btn-outline-primary" [routerLink]="['/showarticle', post._id]">Read More</a>
+                
+            </div>
+        </div>
+    </div>
+</div>
